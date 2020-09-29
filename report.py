@@ -9,6 +9,9 @@ data = config_json_read()
 content_type = data['auth']['content_type']
 email = data['auth']['email']
 token = data['auth']['token']
+toemail = data['email_config']['to_email']
+fromemail = data['email_config']['from_email']
+relayserver = data['email_config']['relay_server']
 
 def send_mail(bodyContent):
     """
@@ -16,8 +19,8 @@ def send_mail(bodyContent):
     """
     today_date = date.today()
     today_date = today_date.strftime("%d %b, %Y")
-    to_email = ''
-    from_email = ''
+    to_email = toemail
+    from_email = fromemail
     subject = 'Daily Cloudflare Certificate Inventory for ' + str(today_date)
     message = MIMEMultipart()
     message['Subject'] = subject
@@ -48,7 +51,7 @@ def send_mail(bodyContent):
         exit()
     msgBody = message.as_string()
 
-    server = SMTP('', 25)
+    server = SMTP(relayserver, 25)
     server.sendmail(from_email, to_email, msgBody)
     server.quit()
 
