@@ -16,8 +16,8 @@ def send_mail(bodyContent):
     """
     today_date = date.today()
     today_date = today_date.strftime("%d %b, %Y")
-    to_email = 'tech.webinventory@kurtosys.com'
-    from_email = 'no-reply@kurtosysweb.com'
+    to_email = ''
+    from_email = ''
     subject = 'Daily Cloudflare Certificate Inventory for ' + str(today_date)
     message = MIMEMultipart()
     message['Subject'] = subject
@@ -48,7 +48,7 @@ def send_mail(bodyContent):
         exit()
     msgBody = message.as_string()
 
-    server = SMTP('m1-relay-001.kexpress.net', 25)
+    server = SMTP('', 25)
     server.sendmail(from_email, to_email, msgBody)
     server.quit()
 
