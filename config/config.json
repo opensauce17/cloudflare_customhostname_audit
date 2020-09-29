@@ -1,0 +1,26 @@
+{
+    "auth": {
+        "email": "",
+        "token": "",
+        "account_id": "",
+        "namespace_id": "",
+        "content_type": "application/json",
+        "cache_control": "no-cache"
+      },
+      "zones": {
+        "zone1": "",
+        "zone2": "",
+        "zone3": "",
+        "zone4": "",
+        "zone5": "",
+        "zone6": ""
+      },
+      "zone_ids": {
+        "zone1": "",
+        "zone2": "",
+        "zone3": "",
+        "zone4": "",
+        "zone5": "",
+        "zone6": ""
+      }
+  }
