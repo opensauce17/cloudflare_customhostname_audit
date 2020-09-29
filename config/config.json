@@ -7,6 +7,11 @@
         "content_type": "application/json",
         "cache_control": "no-cache"
       },
+      "email_config": {
+        "to_email": "",
+        "from_email": "",
+        "relay_server": ""
+      ),
       "zones": {
         "zone1": "",
         "zone2": "",
