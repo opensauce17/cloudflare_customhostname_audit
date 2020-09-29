@@ -4,7 +4,7 @@
 
 * python 3.6 or later
 * create a virtual environment in the project root, in a folder called .env and install required libraries from requirements.txt
-* edit the config/config.json with the required authentication and zone details
+* edit the config/config.json with the required authentication, email and zone details
 
 ### The Report Script ###
 
